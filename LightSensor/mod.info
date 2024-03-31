@@ -1,0 +1,4 @@
+name=LightSensor
+poster=poster.png
+id=LightSensor
+description=Add light sensors to automatically turn on lights during night and turn them off during day to converse energy

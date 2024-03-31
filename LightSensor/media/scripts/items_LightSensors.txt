@@ -1,0 +1,45 @@
+module LightSensors
+{
+    imports
+    {
+        Base
+    }
+
+    /************************ Items ************************/
+
+    item LSElectronicsMag
+    {
+        Type = Literature,
+        DisplayCategory = SkillBook,
+        DisplayName = Electronics Magazine Vol. 5 Light Sensors,
+        StaticModel = Magazine,
+        Icon = MagazineElectronics03,
+        WorldStaticModel = MagazineElec3Ground,
+        Weight = 0.1,
+        TeachedRecipes = Make Light Sensor,
+        ReplaceOnUse = LSElectronicsMag,
+    }
+
+    item LSLightSensor
+    {
+        Type = Normal,
+        DisplayCategory = Electronics,
+        DisplayName = Light Sensor,
+        Icon = MotionSensor,
+        WorldStaticModel = MotionSensor,
+        Weight = 0.1,
+    }
+
+    /*********************** Recipes ***********************/
+
+    recipe Make Light Sensor
+    {
+        ElectronicsScrap=2,
+        keep [Recipe.GetItemTypes.Screwdriver],
+        Result:LSLightSensor,
+        SkillRequired:Electricity=2,
+        NeedToBeLearn:true,
+        Time:50.0,
+        Category:Electrical,
+    }
+}
